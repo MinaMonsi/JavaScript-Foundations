@@ -16,6 +16,7 @@ let name = "Mina";
 */
 var monthlyInterestRate = interestRate % 12;
 var periods = years * 12;
+// ^periods is your N
 
 // 🏡 Task 2: Harder Math
 /* Create your calculator! Use the formula in the ReadMe (also below) to run calculations on your numbers. Save the final value into a variable called monthlyRate. 
@@ -30,20 +31,9 @@ Hint: while these calculations can be done in one line, it might be helpful to c
 
 (1) Create a variable called n1 and set it equal to  (1 + monthlyInterestRate )^N
 
- 
-let n1 = (1 + monthlyInterestRate)** N
-
-
 (2) Create a variable called numerator and set it equal to p * n1 * monthlyInterestRate
 
-
-let numerator = p * n1 * monthlyInterestRate
-
-
 (3) Create a variable called denominator and set it equal to n1 - 1 
-
-let denominator = n1 - 1
-
 
 (4) Create a variable called monthlyRate and set it equal to numerator/denominator
 
@@ -54,8 +44,8 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
-let n1 = (1 + monthlyInterestRate) ** N;
-let numerator = p * n1 * monthlyInterestRate;
+let n1 = Math.pow(1 + monthlyInterestRate, years);
+let numerator = principal * n1 * monthlyInterestRate;
 let denominator = n1 - 1;
 let monthlyRate = numerator % denominator;
 
@@ -64,6 +54,8 @@ let monthlyRate = numerator % denominator;
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
+
+function mortgageCalculator(principal, interestRate, years) {}
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` when you call the function.
