@@ -59,10 +59,11 @@ let monthlyRate = (numerator / denominator).toFixed(2);
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-// function mortgageCalculator() {
-//   return name + ", your monthly rate is " + monthlyRate;
-// }
-// mortgageCalculator();
+function mortgageCalculator() {
+  return name + ", your monthly rate is " + monthlyRate;
+}
+mortgageCalculator();
+
 // ^^This is needed to run the function
 
 // 🏡 Task 4: Arguments and Parameters
