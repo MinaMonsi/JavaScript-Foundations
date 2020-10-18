@@ -59,10 +59,10 @@ let monthlyRate = (numerator / denominator).toFixed(2);
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-function mortgageCalculator() {
-  return name + ", your monthly rate is " + monthlyRate;
-}
-mortgageCalculator();
+// function mortgageCalculator() {
+//   return name + ", your monthly rate is " + monthlyRate;
+// }
+// mortgageCalculator();
 // ^^This is needed to run the function
 
 // 🏡 Task 4: Arguments and Parameters
@@ -71,6 +71,20 @@ mortgageCalculator();
 For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
+var p = parseInt("");
+var i = parseInt("");
+var n = parseInt("");
+
+function mortgageCalculator2(p, i, n) {
+  var n = n * 12;
+  var n2 = Math.pow(1 + i / 12, n);
+  var numerator2 = p * n2 * (i / 12);
+  var denominator2 = n2 - 1;
+  var monthlyRate2 = (numerator2 / denominator2).toFixed(2);
+
+  return name + ", your monthly rate is " + monthlyRate;
+}
+mortgageCalculator2();
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 (a credit score).
