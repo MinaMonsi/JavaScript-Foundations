@@ -51,7 +51,7 @@ var numerator = principal * n1 * monthlyInterestRate;
 
 let denominator = n1 - 1;
 
-let monthlyRate = numerator / denominator;
+let monthlyRate = (numerator / denominator).toFixed(2);
 
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name}, your monthly rate is ${monthlyRate}"
