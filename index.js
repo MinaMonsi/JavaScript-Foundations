@@ -59,7 +59,11 @@ let monthlyRate = (numerator / denominator).toFixed(2);
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-// function mortgageCalculator(principal, interestRate, years) {}
+function mortgageCalculator() {
+  return name + ", your monthly rate is " + monthlyRate;
+}
+mortgageCalculator();
+// ^^This is needed to run the function
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` when you call the function.
