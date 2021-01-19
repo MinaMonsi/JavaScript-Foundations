@@ -15,7 +15,11 @@ var name = "Mina";
 /*(1) Create a variable called `monthlyInterestRate` and give it the value of interest rate divided by 12. 
 (2) Create another variable called `periods` and give it the value of years*12.
 */
+var monthlyInterestRate = 0.05 / 12;
+// console.log(monthlyInterestRate);
 
+var periods = years * 12;
+console.log(periods);
 // ^periods is your N
 
 // 🏡 Task 2: Harder Math
