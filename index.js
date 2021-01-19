@@ -7,7 +7,7 @@
 var principle = 200000;
 var interestRate = 0.05;
 var years = 30;
-var name = "Mina";
+var name = "Oscar";
 
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the number of years in months and the monthly interest rate. */
@@ -63,6 +63,11 @@ var monthlyRate = (numerator / denominator).toFixed(2);
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+function mortgageCalculator() {
+  console.log(name + ", your monthly rate is" + monthlyRate);
+}
+
+mortgageCalculator();
 // ^^This is needed to run the function
 
 // 🏡 Task 4: Arguments and Parameters
