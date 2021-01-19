@@ -19,7 +19,8 @@ var monthlyInterestRate = 0.05 / 12;
 // console.log(monthlyInterestRate);
 
 var periods = years * 12;
-console.log(periods);
+// console.log(periods);
+
 // ^periods is your N
 
 // 🏡 Task 2: Harder Math
@@ -47,6 +48,14 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 
 When your math is correct, monthlyRate will equal 1073.64
 */
+var n1 = Math.pow(1 + monthlyInterestRate, periods);
+// console.log(n1);    1.00416667
+var numerator = principle * n1 * monthlyInterestRate;
+// console.log(numerator);
+var denominator = n1 - 1;
+// console.log(denominator);
+var monthlyRate = (numerator / denominator).toFixed(2);
+// console.log(monthlyRate);
 
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name}, your monthly rate is ${monthlyRate}"
