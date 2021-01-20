@@ -126,6 +126,24 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
+let variableInterestRate = function (p, i, n) {
+  for (let x = i - 0.02; x < i + 0.02; x += 0.005) {
+    let principal = p;
+    let rate = x.toFixed(3);
+    let interestRate = rate * 1;
+    let years = n;
+    let periods = years * 12;
+    let n1 = Math.pow(1 + monthlyInterestRate, periods);
+    let numerator = principal * n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    let monthlyRate = numerator / denominator;
+    let result = Number(Math.round(monthlyRate * 100) / 100).toFixed(0);
+    return result;
+  }
+};
+var variableResult = Number(variableInterestRate(200000, 0.04, 30));
+console.log(variableResult);
+
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
 /* Attempt any of the stretch goals below once you have finished the work above. Remember as always, these may require additional research beyond what you learned today */
