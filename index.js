@@ -64,10 +64,11 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 */
 
 function mortgageCalculator() {
-  console.log(name + ", your monthly rate is" + monthlyRate);
+  console.log(name + ", your monthly rate is " + monthlyRate);
 }
 
 mortgageCalculator();
+
 // ^^This is needed to run the function
 
 // 🏡 Task 4: Arguments and Parameters
@@ -76,6 +77,19 @@ mortgageCalculator();
 For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
+var p = parseInt("");
+var i = parseInt("");
+var n = parseInt("");
+
+function mortgageCalculator2(p, i, n) {
+  var n = n * 12;
+  var n2 = Math.pow(1 + i / 12, n);
+  var numerator2 = p * n2 * (i / 12);
+  var denominator2 = n2 - 1;
+  var monthlyRate2 = (numerator2 / denominator2).toFixed(2);
+  return name + ", your monthly rate is " + monthlyRate;
+}
+mortgageCalculator2();
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 (a credit score).*/
@@ -84,6 +98,16 @@ mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 
 /*Hint: To drop an interest rate by 5% you can take monthlyRate and multiply it by 0.95. Similarly, to increase an interest rate by 5% you'd do monthlyRate * 1.05.
  */
+
+var creditScore = parseInt("");
+
+if (creditScore > 740) {
+  monthlyRate = (monthlyRate * 0.95).toFixed(2);
+} else if (creditScore < 660) {
+  monthlyRate = (monthlyRate * 1.05).toFixed(2);
+} else if (creditScore > 660 && creditScore < 740) {
+  monthlyRate = (monthlyRate * 1).toFixed(2);
+}
 
 // expected output: "NOT positive"
 // 🏡 Task 6: Loops
